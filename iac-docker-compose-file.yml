@@ -1,0 +1,15 @@
+services:
+  iac_website:
+    build:
+      context: .
+      dockerfile: iac-docker-file
+      no-cache: true
+    container_name: iac_website
+    image: iac_website
+    ports:
+      - "8090:80"
+      - "8091:80"
+    volumes:
+      - /home/talha/volume:/var/www/html/
+    hostname: iac_website
+      #restart: always # This line ensures the container restarts automatically on failure

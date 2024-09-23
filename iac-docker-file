@@ -1,0 +1,25 @@
+# Use the base image Ubuntu
+FROM ubuntu:latest
+
+# Install Nginx
+RUN apt-get update
+ 
+RUN apt-get install nginx -y
+
+RUN service nginx start
+
+# Expose port 80 for Nginx
+EXPOSE 80
+
+WORKDIR /opt/volume
+
+# Add and clone the code from GitHub using ADD command
+ADD https://github.com/muhammadtalha766/local.git /opt/volume
+
+# Copy the local/host iac-textfile to the container
+COPY ./iac-textfile /opt/volume
+
+RUN cp ./index.html /var/www/html
+
+# Start Nginx when the container launches
+CMD ["nginx", "-g", "daemon off;"]
