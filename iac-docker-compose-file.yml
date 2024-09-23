@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: iac-docker-file
-      no-cache: true
+        #no-cache: true
     container_name: iac_website
     image: iac_website
     ports:
