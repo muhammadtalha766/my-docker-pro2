@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Webpage</title>
+    <title>Basic Webpage</title>
     <style>
         /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
 
-        /* Header Styles */
+        /* Heading Styles */
         h1 {
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
-            text-align: center;
             padding: 20px;
             margin: 0;
         }
@@ -25,35 +25,55 @@
         /* Paragraph Styles */
         p {
             font-size: 18px;
-            color: #555;
-            text-align: center;
-            padding: 20px;
-            margin: 0;
+            color: #333;
+            margin-top: 20px;
         }
 
-        /* Link Styles */
-        a {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            text-align: center;
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
+        /* Image Styles */
+        img {
+            margin: 20px;
+            border-radius: 10px;
+            border: 2px solid #4CAF50;
+        }
+
+        /* List Styles */
+        h2 {
+            color: #4CAF50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #ddd;
+            padding: 10px;
+            margin: 5px;
             border-radius: 5px;
+            color: #333;
         }
 
-        a:hover {
-            background-color: #0056b3;
+        /* Hover Effect for List Items */
+        ul li:hover {
+            background-color: #4CAF50;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Simple Webpage</h1>
-    <p>This is a basic HTML webpage with a heading, a paragraph, and a link.</p>
-    <a href="https://www.example.com" target="_blank">Click here to visit Example</a>
+    <h1>My Basic Webpage</h1>
+    
+    <p>This is a simple webpage with an image and a list of my favorite hobbies:</p>
+    
+    <img src="https://via.placeholder.com/150" alt="Sample Image" width="150" height="150">
+    
+    <h2>My Hobbies</h2>
+    <ul>
+        <li>Reading Books</li>
+        <li>Playing Football</li>
+        <li>Travelling</li>
+        <li>Coding</li>
+    </ul>
 </body>
 </html>
-
-
