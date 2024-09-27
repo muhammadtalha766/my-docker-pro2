@@ -11,7 +11,8 @@ WORKDIR /opt/volume
 
 # Clone the code from GitHub
 RUN apt-get install git -y
-ADD https://github.com/muhammadtalha766/local.git /opt/volume
+#ADD https://github.com/muhammadtalha766/local.git /opt/volume
+ADD https://github.com/muhammadtalha766/my-docker-pro2.git /opt/volume
 
 # Copy the local/host iac-textfile to the container
 COPY ./iac-textfile /opt/volume
