@@ -1,26 +1,15 @@
-# Use the base image Ubuntu
+# Use the official Ubuntu base image
 FROM ubuntu:latest
 
 # Install Nginx
-RUN apt-get update && apt-get install nginx -y
+RUN apt update && apt install -y nginx
 
-# Expose port 80 for Nginx
+
+# Copy website files to the container
+COPY ./index.html /var/www/html/
+
+# Expose the Nginx port
 EXPOSE 80
 
-WORKDIR /opt/volume
-
-# Clone the code from GitHub
-RUN apt-get install git -y
-#ADD https://github.com/muhammadtalha766/local.git /opt/volume
-ADD https://github.com/muhammadtalha766/my-docker-pro2.git /opt/volume
-
-# Copy the local/host iac-textfile to the container
-COPY ./iac-textfile /opt/volume
-
-RUN cp ./index.html /var/www/html
-# Copy index.html to Nginx directory
-#RUN cp ./index.html /var/www/html
-
 # Start Nginx when the container launches
-CMD ["nginx", "-g", "daemon off;"]
-
+CMD ["nginx", "-g", "daemon off;"]
